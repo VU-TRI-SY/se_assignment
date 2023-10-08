@@ -21,6 +21,14 @@ public class Match  implements Comparable<Match> {
         return firstIndex;
     }
 
+    public Word getWord(){
+        return w;
+    }
+
+    public Doc getDoc(){
+        return d;
+    }
+
     public int compareTo (Match o ) {
         if (this.getFirstIndex() < o.getFirstIndex())
             return -1;

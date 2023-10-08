@@ -24,6 +24,7 @@ public class Query {
         List<Match> result = new ArrayList<>();
         List<Word> title = d.getTitle();
         List<Word> body = d.getBody();
+
         for (Word keyWord: keywords) {
             int frequency = 0;
             int firstIndex = -1;
@@ -37,7 +38,7 @@ public class Query {
                 }
             }
 
-            for(int i = 0; i < title.size(); i++){
+            for(int i = 0; i < body.size(); i++){
                 if(body.get(i).equals(keyWord)){
                     frequency ++;
                     if (firstIndex == -1){
